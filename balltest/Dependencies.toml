@@ -1,0 +1,5 @@
+[Dependencies]
+[dependency]
+org = "ballerina"
+name = "io"
+version = "1.0.0"

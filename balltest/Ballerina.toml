@@ -1,0 +1,6 @@
+
+[package]
+name = "balltest"
+version = "1.0.0"
+description = "A simple Ballerina project that prints a greeting message."
+license = "MIT"
