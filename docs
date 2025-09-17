@@ -1,0 +1,85 @@
+# 🧬 Ballerina's Rich Type System
+
+Ballerina is a statically typed, open-source programming language designed for cloud-native and distributed applications. Its **rich type system** enables developers to write expressive, safe, and modular code.
+
+---
+
+## ✅ Statically Typed
+
+- All variables and expressions have known types at **compile time**.
+- This helps catch errors early and improves code reliability.
+
+---
+
+## 🔀 Union Types
+
+- Ballerina supports **union types**, allowing a value to be one of several types.
+- Example: `string|error` means the value can be either a string or an error.
+
+```ballerina
+function greet(string name) returns string|error {
+    if name.length() > 0 {
+        return "Hello " + name;
+    } else {
+        return error("Name cannot be empty");
+    }
+}
+# 🧬 Ballerina's Rich Type System and Data Structures
+
+The **Ballerina programming language** comes with a **rich type system**, making it ideal for building robust and expressive cloud-native applications.
+
+---
+
+## ✅ Primitive Types
+
+Ballerina supports several built-in primitive types, including:
+
+- `int` – for integers
+- `float` – for floating-point numbers
+- `boolean` – for true/false values
+- `string` – for text
+
+For more details, refer to the [official Ballerina documentation](https://ballerina.io/learn/by-example/).
+
+---
+
+## 🔀 Union Types
+
+Ballerina allows **union types**, which enable a variable or return value to hold more than one possible type.
+
+### Example: `say_hello` Function
+
+```ballerina
+function say_hello(string name) returns string|error {
+    if (string:length(name) > 0) {
+        return "Hello " + name;
+    } else {
+        return error("Error! The name should not be an empty string");
+    }
+}
+# 🗂️ Maps and Records in Ballerina
+
+In Ballerina, another powerful data structure is **mapping keys to values**, which can be implemented using either a **map** or a **record**.
+
+---
+
+## 🔑 Map
+
+- A **map** is an **associative array** that maps keys to values.
+- All keys in a map are of type `string`.
+- Values can be of any type, including other maps, arrays, or primitive types.
+
+### Example: Map of Songs
+
+```ballerina
+map<string> the_songs = {
+    "You are the one": "Let it rain",
+    "Subcity": "Crossroads",
+    "Smoke and Ashes": "New Beginning"
+};
+
+public function print_albums(map<string> all_songs) {
+    foreach string single_song in all_songs.keys() {
+        io:println(single_song, " : ", all_songs[single_song]);
+    }
+}
